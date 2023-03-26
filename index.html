@@ -42,7 +42,11 @@
                         <div class="title">BUILD</div>
                         <div class="buildings">
                             {{#each build}}
-                                <div class="building"><img src="images/buildings/{{this}}.png" /></div>
+                                {{#if building}}
+                                    <div class="building"><img src="images/buildings/{{building}}.png" />{{#if amount}}&nbsp;{{amount}}{{/if}}</div>
+                                {{else if unit}}
+                                    <div class="unit"><img src="images/units/{{unit}}.png" />{{#if amount}}&nbsp;{{amount}}{{/if}}</div>
+                                {{/if}}
                             {{/each}}
                         </div>
                     </div>
@@ -93,7 +97,8 @@
                     amount: 1
                 },{
                     build: [
-                        'barracks'
+                        { building: 'barracks' },
+                        { unit: 'militia', amount: 3}
                     ]
                 },{
                     resource: 'gold',
