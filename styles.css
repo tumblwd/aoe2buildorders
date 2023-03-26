@@ -1,0 +1,69 @@
+* {
+	font-family: 'Barlow', 'Montserrat', 'Arial';
+	font-size: 24pt;
+	font-weight: bold;
+}
+
+.container, .steps {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.container .title {
+	padding: 15px;
+	background-color: #333;
+	color: #fff;
+	border-radius: 15px 0 0 15px;
+}
+
+.steps {
+	padding: 15px;
+	background-color: #eee;
+	border-radius: 0 15px 15px 0;
+}
+
+.step {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 0 10px;
+	border-radius: 10px;
+	padding: 10px 20px;
+}
+
+img {
+	width: 40px;
+}
+
+.resource > span {
+	padding-left: 8px;
+}
+
+.resource.food {
+	background-color: #FF9999;
+}
+.resource.wood {
+	background-color: #B5622B;
+}
+.resource.gold {
+	background-color: #FFB43D;
+}
+.resource.stone {
+	background-color: #CCCCCC;
+}
+
+.age {
+	height: 100%;
+	background: #000;
+}
+
+.balance {
+	border-left: 1px solid #aaa;
+	border-right: 1px solid #aaa;
+	background-color: #ddd;
+}
+.balance .resources{
+	display: flex;
+	flex-direction: column;
+}
