@@ -16,7 +16,7 @@
 
 .container > .title {
 	padding: 15px;
-	background-color: #333;
+	background-image: linear-gradient(45deg, #222, #555);
 	color: #fff;
 	border-radius: 15px 0 0 15px;
 }
@@ -34,6 +34,8 @@
 	margin: 0 10px;
 	border-radius: 10px;
 	padding: 10px 20px;
+	border: 1px solid rgba(0,0,0,0.2);
+	box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
 }
 
 img {
@@ -45,21 +47,21 @@ img {
 }
 
 .resource.food {
-	background-color: #FF9999;
+	background-image: linear-gradient(45deg, #DD7777, #FFBBBB);
 }
 .resource.wood {
-	background-color: #B5622B;
+	background-image: linear-gradient(45deg, #95622B, #D9A66F);
 }
 .resource.gold {
-	background-color: #FFB43D;
+	background-image: linear-gradient(45deg, #FFB43D, #FFD65F);
 }
 .resource.stone {
-	background-color: #CCCCCC;
+	background-image: linear-gradient(45deg, #BBBBBB, #EEEEEE);
 }
 
 .age {
 	height: 100%;
-	background: #000;
+	background-image: linear-gradient(45deg, #000, #444);
 }
 
 .balance {
@@ -70,6 +72,10 @@ img {
 .balance .resources{
 	display: flex;
 	flex-direction: column;
+}
+.balance-title {
+	writing-mode: vertical-rl;
+	font-size: 12pt;
 }
 
 .build, .research {

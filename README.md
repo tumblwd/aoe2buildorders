@@ -11,4 +11,4 @@ Build orders are hard and often very detailed; for the newer/low ELO player, har
 Visit the discussions page to provide one: https://github.com/GrandyB/aoe2buildorders/discussions/1
 I'll try to keep up with these.
 
-Alternatively, feel free to create a pull request. It's pretty easy to see how build orders are added into the index.html.
+Alternatively, feel free to create a pull request. It's pretty easy to see how build orders are added into the index.html, from small javascript/json files in /builds.

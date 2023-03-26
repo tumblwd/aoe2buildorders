@@ -40,14 +40,15 @@
             Handlebars.registerPartial('step', `
                 {{#if resource}}
                     <div class="step resource {{resource}}">
-                        <img src="images/resources/{{resource}}.png" /><span>{{amount}}</span>
+                        <img src="images/resources/{{resource}}.png" alt="{{resource}}" title="{{resource}}" /><span>{{amount}}</span>
                     </div>
                 {{else if balance}}
                     <div class="step balance">
                         <div class="switch">🔀</div>
+                        <div class="balance-title">RE-BALANCE</div>
                         <div class="resources">
                             {{#each balance}}
-                                <div class="step resource {{res}}"><img src="images/resources/{{res}}.png" /><span>{{amount}}</span></div>
+                                <div class="step resource {{res}}"><img src="images/resources/{{res}}.png" alt="{{res}}" title="{{res}}"/><span>{{amount}}</span></div>
                             {{/each}}
                         </div>
                     </div>
@@ -57,9 +58,9 @@
                         <div class="buildings">
                             {{#each build}}
                                 {{#if building}}
-                                    <div class="building"><img src="images/buildings/{{building}}.png" />{{#if amount}}&nbsp;{{amount}}{{/if}}</div>
+                                    <div class="building"><img src="images/buildings/{{building}}.png" alt="{{building}}" title="{{building}}" />{{#if amount}}&nbsp;{{amount}}{{/if}}</div>
                                 {{else if unit}}
-                                    <div class="unit"><img src="images/units/{{unit}}.png" />{{#if amount}}&nbsp;{{amount}}{{/if}}</div>
+                                    <div class="unit"><img src="images/units/{{unit}}.png" alt="{{unit}}" title="{{unit}}" />{{#if amount}}&nbsp;{{amount}}{{/if}}</div>
                                 {{/if}}
                             {{/each}}
                         </div>
@@ -68,14 +69,15 @@
                     <div class="step research">
                         <div class="title">RESEARCH</div>
                         <div class="researches">
+                        <!-- TODO: Change to using similar strategy to the above. -->
                             {{#each research}}
-                                <div class="tech"><img src="images/{{this}}.png" /></div>
+                                <div class="tech"><img src="images/{{this}}.png" alt="{{this}}" title="{{this}}"/></div>
                             {{/each}}
                         </div>
                     </div>
                 {{else if age}}
                     <div class="step age {{age}}">
-                        <img src='images/ages/{{age}}.png' />
+                        <img src='images/ages/{{age}}.png' alt="{{age}}" title="{{age}}" />
                     </div>
                 {{/if}}
                 `);
@@ -94,49 +96,15 @@
             dom.innerHTML += html;
         }
 
-        createBuild({
-            name: 'M@A Archers',
-            steps: [
-                {
-                    resource: 'food',
-                    amount: 6
-                },{
-                    resource: 'wood',
-                    amount: 4
-                },{
-                    resource: 'food',
-                    amount: 9
-                },{
-                    resource: 'wood',
-                    amount: 1
-                },{
-                    build: [
-                        { building: 'barracks' },
-                        { unit: 'militia', amount: 3}
-                    ]
-                },{
-                    resource: 'gold',
-                    amount: 2
-                },{
-                    age: 'feudal'
-                },{
-                    balance: [
-                        { res: 'food', amount: 11 },
-                        { res: 'wood', amount: 9 },
-                        { res: 'gold', amount: 2 },
-                    ]
-                },{
-                    research: [
-                        'units/manatarms', 'techs/doublebitaxe', 'techs/horsecollar'
-                    ]
-                },{
-                    resource: 'wood',
-                    amount: 2
-                },{
-                    resource: 'gold',
-                    amount: 8
-                }
-            ]
-        });
+        function loadScript(url) {
+            var head = document.head;
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = url;
+            head.appendChild(script);
+        }
+
+        // Add new builds here!
+        loadScript("./builds/menatarmsarchers22pop.js");
     </script>
 </html>
