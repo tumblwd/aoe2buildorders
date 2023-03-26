@@ -14,16 +14,24 @@
 	font-weight: bold;
 }
 
+.steps {
+	border: 1px solid rgba(0,0,0,0.2);
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
 .container > .title {
-	padding: 15px;
 	background-image: linear-gradient(45deg, #222, #555);
 	color: #fff;
 	border-radius: 15px 0 0 15px;
+	align-self: stretch;
+	display: flex;
+	align-items: center;
+	padding: 15px;
 }
 
 .steps {
 	padding: 15px;
-	background-color: #eee;
+	background-image: linear-gradient(45deg, #ccc, #eee);
 	border-radius: 0 15px 15px 0;
 }
 
@@ -34,12 +42,14 @@
 	margin: 0 10px;
 	border-radius: 10px;
 	padding: 10px 20px;
-	border: 1px solid rgba(0,0,0,0.2);
-	box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+	border: 1px solid rgba(0,0,0,0.4);
 }
 
 img {
 	width: 40px;
+}
+.title {
+	margin-bottom: 3px;
 }
 
 .resource > span {
@@ -56,7 +66,7 @@ img {
 	background-image: linear-gradient(45deg, #FFB43D, #FFD65F);
 }
 .resource.stone {
-	background-image: linear-gradient(45deg, #BBBBBB, #EEEEEE);
+	background-image: linear-gradient(45deg, #777, #aaa);
 }
 
 .age {
@@ -65,9 +75,7 @@ img {
 }
 
 .balance {
-	border-left: 1px solid #aaa;
-	border-right: 1px solid #aaa;
-	background-color: #ddd;
+	background-image: linear-gradient(45deg, #aac, #ddf);
 }
 .balance .resources{
 	display: flex;
@@ -81,6 +89,7 @@ img {
 .build, .research {
 	display: flex;
 	flex-direction: column;
+	background-image: linear-gradient(45deg, #ddd, #fff);
 }
 .unit, .building {
 	display: flex;
