@@ -1,13 +1,17 @@
 * {
 	font-family: 'Barlow', 'Montserrat', 'Arial';
-	font-size: 24pt;
-	font-weight: bold;
+}
+
+#preamble {
+	font-size: 16pt;
 }
 
 .container, .steps {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	font-size: 24pt;
+	font-weight: bold;
 }
 
 .container > .title {
