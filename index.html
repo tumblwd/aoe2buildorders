@@ -26,20 +26,20 @@
             Handlebars.registerPartial('step', `
                 {{#if resource}}
                     <div class="step resource {{resource}}">
-                        <img src="images/{{resource}}.png" /><span>{{amount}}</span>
+                        <img src="images/resources/{{resource}}.png" /><span>{{amount}}</span>
                     </div>
                 {{else if balance}}
                     <div class="step balance">
                         <div class="switch">🔀</div>
                         <div class="resources">
                             {{#each balance}}
-                                <div class="step resource {{res}}"><img src="images/{{res}}.png" /><span>{{amount}}</span></div>
+                                <div class="step resource {{res}}"><img src="images/resources/{{res}}.png" /><span>{{amount}}</span></div>
                             {{/each}}
                         </div>
                     </div>
                 {{else if age}}
                     <div class="step age {{age}}">
-                        <img src='images/{{age}}.png' />
+                        <img src='images/ages/{{age}}.png' />
                     </div>
                 {{/if}}
                 `);
