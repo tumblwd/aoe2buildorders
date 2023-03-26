@@ -37,6 +37,24 @@
                             {{/each}}
                         </div>
                     </div>
+                {{else if build}}
+                    <div class="step build">
+                        <div class="title">BUILD</div>
+                        <div class="buildings">
+                            {{#each build}}
+                                <div class="building"><img src="images/buildings/{{this}}.png" /></div>
+                            {{/each}}
+                        </div>
+                    </div>
+                {{else if research}}
+                    <div class="step research">
+                        <div class="title">RESEARCH</div>
+                        <div class="researches">
+                            {{#each research}}
+                                <div class="tech"><img src="images/{{this}}.png" /></div>
+                            {{/each}}
+                        </div>
+                    </div>
                 {{else if age}}
                     <div class="step age {{age}}">
                         <img src='images/ages/{{age}}.png' />
@@ -74,6 +92,10 @@
                     resource: 'wood',
                     amount: 1
                 },{
+                    build: [
+                        'barracks'
+                    ]
+                },{
                     resource: 'gold',
                     amount: 2
                 },{
@@ -83,6 +105,10 @@
                         { res: 'food', amount: 11 },
                         { res: 'wood', amount: 9 },
                         { res: 'gold', amount: 2 },
+                    ]
+                },{
+                    research: [
+                        'units/manatarms', 'techs/doublebitaxe', 'techs/horsecollar'
                     ]
                 },{
                     resource: 'wood',

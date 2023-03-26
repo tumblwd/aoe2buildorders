@@ -10,7 +10,7 @@
 	align-items: center;
 }
 
-.container .title {
+.container > .title {
 	padding: 15px;
 	background-color: #333;
 	color: #fff;
@@ -64,6 +64,11 @@ img {
 	background-color: #ddd;
 }
 .balance .resources{
+	display: flex;
+	flex-direction: column;
+}
+
+.build, .research {
 	display: flex;
 	flex-direction: column;
 }
