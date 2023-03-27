@@ -1,5 +1,5 @@
 createBuild({
-    name: 'M@A Archers',
+    name: 'M@A Archers (22 vil)',
     steps: [
         {
             resource: 'food',
@@ -31,7 +31,9 @@ createBuild({
             ]
         },{
             research: [
-                'units/manatarms', 'techs/doublebitaxe', 'techs/horsecollar'
+                { unit: 'manatarms'}, 
+                { tech: 'doublebitaxe'},
+                { tech: 'horsecollar' }
             ]
         },{
             build: [

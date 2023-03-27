@@ -42,10 +42,25 @@
         function createBuild(data) {
             var cellsHtml = "";
 
+            Handlebars.registerHelper('counter', function (type, amount, options) {
+                var count = options.data.root[type];
+                count = count ? count + amount : amount;
+                options.data.root[type] = count;
+                console.log(`${type}: ${count}`);
+                return count;
+            });
+
+            Handlebars.registerHelper('setCounter', function (type, amount, options) {
+                options.data.root[type] = amount;
+            });
+
             Handlebars.registerPartial('step', `
                 {{#if resource}}
-                    <div class="step resource {{resource}}">
-                        <img src="images/resources/{{resource}}.png" alt="{{resource}}" title="{{resource}}" /><span>{{amount}}</span>
+                    <div class="resource-step-container">
+                        <div class="step resource {{resource}}">
+                            <img src="images/resources/{{resource}}.png" alt="{{resource}}" title="{{resource}}" /><span>{{amount}}</span>
+                        </div>
+                        <div class="total">On res: <b>{{counter resource amount}}</b></div>
                     </div>
                 {{else if balance}}
                     <div class="step balance">
@@ -54,6 +69,7 @@
                         <div class="resources">
                             {{#each balance}}
                                 <div class="step resource {{res}}"><img src="images/resources/{{res}}.png" alt="{{res}}" title="{{res}}"/><span>{{amount}}</span></div>
+                                {{setCounter res amount}}
                             {{/each}}
                         </div>
                     </div>
@@ -74,9 +90,14 @@
                     <div class="step research">
                         <div class="title">RESEARCH</div>
                         <div class="researches">
-                        <!-- TODO: Change to using similar strategy to the above. -->
                             {{#each research}}
-                                <div class="tech"><img src="images/{{this}}.png" alt="{{this}}" title="{{this}}"/></div>
+                                {{#if building}}
+                                    <div class="building"><img src="images/buildings/{{building}}.png" alt="{{building}}" title="{{building}}" />{{#if amount}}&nbsp;{{amount}}{{/if}}</div>
+                                {{else if unit}}
+                                    <div class="unit"><img src="images/units/{{unit}}.png" alt="{{unit}}" title="{{unit}}" />{{#if amount}}&nbsp;{{amount}}{{/if}}</div>
+                                {{else if tech}}
+                                    <div class="tech"><img src="images/techs/{{tech}}.png" alt="{{tech}}" title="{{tech}}" /></div>
+                                {{/if}}
                             {{/each}}
                         </div>
                     </div>
@@ -110,6 +131,6 @@
         }
 
         // Add new builds here!
-        loadScript("./builds/menatarmsarchers22pop.js");
+        loadScript("./builds/menatarmsarchers22vil.js");
     </script>
 </html>
