@@ -1,0 +1,71 @@
+// build assumes feudal scouts & transition to castle. Likely knights early castle, then options e.g. CA
+// no deer pushing assumed although does make it easier 
+createBuild({
+    name: 'Scouts to Castle (18 vil)',
+    steps: [
+        {
+            resource: 'food',
+            amount: 6
+        },{
+            resource: 'wood',
+            amount: 3
+        },{
+            resource: 'food',
+            amount: 6
+        },{
+            resource: 'wood',
+            amount: 1
+        },{
+            resource: 'food',
+            amount: 2
+        },{
+            age: 'feudal'
+        },{
+            build: [
+                { building: 'barracks' },
+            ]
+        },{
+            balance: [
+                { res: 'food', amount: 7 },
+                { res: 'wood', amount: 11 },
+                { res: 'gold', amount: 0 },
+            ]
+        },{
+            research: [
+                { tech: 'doublebitaxe'},
+                { tech: 'horsecollar' }
+            ]
+        },{
+            build: [
+                { building: 'stable' },
+                { unit: 'scout', amount: 7 },
+            ]
+        },{
+            resource: 'food',
+            amount: 11
+        },{
+            build: [
+                { building: 'blacksmith' },
+            ]
+        },{
+            resource: 'gold',
+            amount: 4
+        },{
+            research: [
+                { tech: 'wheelbarrow'},
+            ]
+        },{
+            age: 'castle'
+        },{
+            balance: [
+                { res: 'food', amount: 18 },
+                { res: 'wood', amount: 7 },
+                { res: 'gold', amount: 8 },
+            ]
+        },{
+            build: [
+                { building: 'stable' },
+            ]
+        }
+    ]
+});
