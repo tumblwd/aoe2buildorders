@@ -69,7 +69,7 @@ createBuild({
         },{
             build: [
                 { building: 'stable' },
-                { unit: 'knight', amount: many}
+//                { unit: 'knight', amount: many}
             ]
         }
     ]
