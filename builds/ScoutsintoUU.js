@@ -29,6 +29,7 @@ createBuild({
                 { building: 'barracks' },
                 { building: 'stable' },
                 { unit: 'scout', amount: 5 },
+                { building: 'pallisadewall' },
             ]
         },{
             research: [
@@ -53,14 +54,14 @@ createBuild({
                 { tech: 'wheelbarrow'},
             ]
         },{
+            age: 'castle'
+        },{
             balance: [
                 { res: 'food', amount: 18 },
                 { res: 'wood', amount: 9 },
                 { res: 'gold', amount: 5 },
                 { res: 'stone', amount: 5 },
             ]
-        },{
-            age: 'castle'
         },{
             research: [
                 { tech: 'goldmining'},
