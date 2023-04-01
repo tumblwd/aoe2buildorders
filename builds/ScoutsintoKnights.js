@@ -27,17 +27,13 @@ createBuild({
             build: [
                 { building: 'barracks' },
                 { building: 'stable' },
+                { unit: 'scout', amount: '3-5' },
+                { building: 'pallisadewall' },
             ]
         },{
             research: [
                 { tech: 'doublebitaxe'},
                 { tech: 'horsecollar' }
-            ]
-        },{
-            build: [
-                { building: 'stable' },
-                { unit: 'scout', amount: '3-5' },
-                { building: 'pallisadewall' },
             ]
         },{
             resource: 'wood',
@@ -51,6 +47,7 @@ createBuild({
         },{
             build: [
                 { building: 'blacksmith' },
+                { building: 'stable' },
             ]
         },{
             research: [
