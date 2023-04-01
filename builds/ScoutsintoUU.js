@@ -22,8 +22,7 @@ createBuild({
             balance: [
                 { res: 'food', amount: 11 },
                 { res: 'wood', amount: 9 },
-                { res: 'gold', amount: 0 },
-            ]
+             ]
         },{
             build: [
                 { building: 'barracks' },
@@ -54,8 +53,6 @@ createBuild({
                 { tech: 'wheelbarrow'},
             ]
         },{
-            age: 'castle'
-        },{
             balance: [
                 { res: 'food', amount: 18 },
                 { res: 'wood', amount: 9 },
@@ -63,15 +60,14 @@ createBuild({
                 { res: 'stone', amount: 5 },
             ]
         },{
-            research: [
-                { tech: 'goldmining'},
-            ]
+            age: 'castle'
         },{
             build: [
                 { building: 'castle' },
             ]
         },{
             research: [
+                { tech: 'goldmining'},
                 { tech: 'bowsaw'},
             ]
         }
