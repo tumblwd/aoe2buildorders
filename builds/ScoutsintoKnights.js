@@ -18,10 +18,6 @@ createBuild({
         },{
             age: 'feudal'
         },{
-            build: [
-                { building: 'barracks' },
-            ]
-        },{
             balance: [
                 { res: 'food', amount: 11 },
                 { res: 'wood', amount: 9 },
@@ -40,7 +36,8 @@ createBuild({
         },{
             build: [
                 { building: 'stable' },
-                { unit: 'scout', amount: 5 },
+                { unit: 'scout', amount: '3-5' },
+                { building: 'pallisadewall' },
             ]
         },{
             resource: 'wood',
