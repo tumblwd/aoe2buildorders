@@ -18,10 +18,6 @@ createBuild({
         },{
             age: 'feudal'
         },{
-            build: [
-                { building: 'barracks' },
-            ]
-        },{
             balance: [
                 { res: 'food', amount: 11 },
                 { res: 'wood', amount: 9 },
@@ -31,16 +27,13 @@ createBuild({
             build: [
                 { building: 'barracks' },
                 { building: 'stable' },
+                { unit: 'scout', amount: '3-5' },
+                { building: 'pallisadewall' },
             ]
         },{
             research: [
                 { tech: 'doublebitaxe'},
                 { tech: 'horsecollar' }
-            ]
-        },{
-            build: [
-                { building: 'stable' },
-                { unit: 'scout', amount: 5 },
             ]
         },{
             resource: 'wood',
@@ -54,6 +47,7 @@ createBuild({
         },{
             build: [
                 { building: 'blacksmith' },
+                { building: 'stable' },
             ]
         },{
             research: [
@@ -69,7 +63,7 @@ createBuild({
         },{
             build: [
                 { building: 'stable' },
-                { unit: 'knight', amount: many}
+                { unit: 'knight', amount: 'many'}
             ]
         }
     ]

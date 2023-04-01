@@ -22,13 +22,13 @@ createBuild({
             balance: [
                 { res: 'food', amount: 11 },
                 { res: 'wood', amount: 9 },
-                { res: 'gold', amount: 0 },
-            ]
+             ]
         },{
             build: [
                 { building: 'barracks' },
                 { building: 'stable' },
                 { unit: 'scout', amount: 5 },
+                { building: 'pallisadewall' },
             ]
         },{
             research: [
@@ -62,15 +62,13 @@ createBuild({
         },{
             age: 'castle'
         },{
-            research: [
-                { tech: 'goldmining'},
-            ]
-        },{
             build: [
                 { building: 'castle' },
+                { unit: 'UU', amount: 'many' },
             ]
         },{
             research: [
+                { tech: 'goldmining'},
                 { tech: 'bowsaw'},
             ]
         }
