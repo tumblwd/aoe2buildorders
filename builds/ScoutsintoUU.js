@@ -64,6 +64,7 @@ createBuild({
         },{
             build: [
                 { building: 'castle' },
+                { unit: 'UU', amount: 'many' },
             ]
         },{
             research: [
