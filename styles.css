@@ -130,3 +130,6 @@ img {
 	align-items: center;
 	margin-bottom: 5px;
 }
+.unit > span {
+	white-space: nowrap;
+}
