@@ -60,7 +60,8 @@ createBuild({
             amount: 2
         },{
             build: [
-                { unit: 'archer', amount: '♾️'}
+                { unit: 'archer', amount: '♾️'},
+                { building: 'pallisadewall' },              
             ]
         },{
             age: 'castle'
