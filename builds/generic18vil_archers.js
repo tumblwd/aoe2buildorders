@@ -1,5 +1,5 @@
-// @bluemoon BO from Low ELO Legion discord channel
-// ideally push or mill deer 
+// simplified @bluemoon BO from Low ELO Legion discord channel
+// ideally push or mill deer while sending to wood
 createBuild({
     name: 'Generic Archers (18 vil)',
     steps: [
@@ -8,16 +8,10 @@ createBuild({
             amount: 6
         },{
             resource: 'wood',
-            amount: 3
+            amount: 4
         },{
             resource: 'food',
-            amount: 2
-        },{
-            resource: 'wood',
-            amount: 1
-        },{
-            resource: 'food',
-            amount: 6
+            amount: 8
         },{
             age: 'feudal'
         },{
